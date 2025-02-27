@@ -1,0 +1,20 @@
+<?php
+session_start();
+
+
+if (!($_SESSION["UserId"])) {
+    
+    setcookie("msg","log",time() + 1, "/");
+    header('Location: /acceder');
+    exit();
+} else { 
+    require_once($_SERVER["DOCUMENT_ROOT"]."/config.php");
+    $UserData =	$db->getAllRecords('usuarios','*',' AND id="'.($_SESSION["UserId"]).'"LIMIT 1 ');
+    $UserData = $UserData[0];
+    
+    if ($UserData['fPerfil']){
+    $fPerfil = '/upload/usuarios/'.(strftime("%Y", strtotime(($UserData['fr'])))).'/'.(strftime("%m", strtotime(($UserData['fr'])))).'/'.($UserData['fPerfil']).'.jpg';
+    } else {$fPerfil = '/upload/usuarios/default.jpg';}
+    //($UserData['nombre'])
+}
+?>
