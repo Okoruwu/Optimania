@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-require_once($_SERVER["DOCUMENT_ROOT"]."/config.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "/config.php");
 if (isset($_SESSION["UserId"])) {
     $UserData = $db->getAllRecords('usuarios', '*', ' AND id = "' . $_SESSION["UserId"] . '" LIMIT 1')[0];
 }
@@ -37,7 +37,9 @@ if (isset($_SESSION["UserId"])) {
             <div class="ps-section__overlay">
                 <div class="ps-section__loading"></div>
             </div>
-            <div class="owl-carousel" data-owl-auto="false" data-owl-loop="true" data-owl-speed="15000" data-owl-gap="0" data-owl-nav="true" data-owl-dots="true" data-owl-item="1" data-owl-item-xs="1" data-owl-item-sm="1" data-owl-item-md="1" data-owl-item-lg="1" data-owl-duration="1000" data-owl-mousedrag="on">
+            <div class="owl-carousel" data-owl-auto="false" data-owl-loop="true" data-owl-speed="15000" data-owl-gap="0"
+                data-owl-nav="true" data-owl-dots="true" data-owl-item="1" data-owl-item-xs="1" data-owl-item-sm="1"
+                data-owl-item-md="1" data-owl-item-lg="1" data-owl-duration="1000" data-owl-mousedrag="on">
 
 
                 <div class="ps-banner" style="background:#DAECFA;">
@@ -50,7 +52,9 @@ if (isset($_SESSION["UserId"])) {
                                     <del>$2,990</del>
                                 </div>
                             </div>
-                            <div class="ps-banner__thumnail"><img class="ps-banner__round" src="img/round2.png" alt="alt" /><img class="ps-banner__image" src="https://dummyimage.com/600x400/dbdbdb/474747&text=Img de ejemplo" alt="alt" />
+                            <div class="ps-banner__thumnail"><img class="ps-banner__round" src="img/round2.png"
+                                    alt="alt" /><img class="ps-banner__image"
+                                    src="https://dummyimage.com/600x400/dbdbdb/474747&text=Img de ejemplo" alt="alt" />
                             </div>
                         </div>
                     </div>
@@ -65,7 +69,9 @@ if (isset($_SESSION["UserId"])) {
                                     <del>$2,990</del>
                                 </div>
                             </div>
-                            <div class="ps-banner__thumnail"><img class="ps-banner__round" src="img/round2.png" alt="alt" /><img class="ps-banner__image" src="https://dummyimage.com/600x400/dbdbdb/474747&text=Img de ejemplo" alt="alt" />
+                            <div class="ps-banner__thumnail"><img class="ps-banner__round" src="img/round2.png"
+                                    alt="alt" /><img class="ps-banner__image"
+                                    src="https://dummyimage.com/600x400/dbdbdb/474747&text=Img de ejemplo" alt="alt" />
                             </div>
                         </div>
                     </div>
@@ -80,10 +86,12 @@ if (isset($_SESSION["UserId"])) {
 
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h4 style="font-weight: 800; color: #33b1e3;" class="ps-banner__title">Somos una empresa mexicana loca por los lentes.
+                        <h4 style="font-weight: 800; color: #33b1e3;" class="ps-banner__title">Somos una empresa
+                            mexicana loca por los lentes.
                             <br>Especialistas en Salud Visual
                         </h4>
-                        <p style="font-size: 18px; font-weight: 800; color: #f18500;">Misión es brindar a tus OJOS nitidez y calidad visual.</p>
+                        <p style="font-size: 18px; font-weight: 800; color: #f18500;">Misión es brindar a tus OJOS
+                            nitidez y calidad visual.</p>
                     </div>
                 </div>
 
@@ -95,7 +103,8 @@ if (isset($_SESSION["UserId"])) {
                             </div>
                         </div>
                         <div class="col-md-6 mt-50">
-                            <h2 class="ps-banner__title">¿Por qué <img style="max-width: 250px;" src="img/logo.png" alt>?</h2>
+                            <h2 class="ps-banner__title">¿Por qué <img style="max-width: 250px;" src="img/logo.png"
+                                    alt>?</h2>
                             <div class="ps-logo"><a href="/"> </a></div>
 
                             <div class="ps-banner__btn-group">
