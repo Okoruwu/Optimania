@@ -18,7 +18,9 @@
       <article class="card-cat">
     <div class="card-int">
         <span class="card__span">De sol</span>
-        <div class="img" src="./agenda.png"></div>
+        <div class="prev-img">
+          <img class="img" src="../agenda.png" alt="vista-previa">
+        </div>
         <div class="card-data">
           <p class="title">Lentes numero #1
           </p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
