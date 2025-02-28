@@ -124,7 +124,7 @@
                                                   <td class="text-center">
                                                      <?php 
                                                         if ($pedido['status']==3) { ?> 
-				            			                 <a target="_blank" href="/completado/?tokenPed=<?php echo $pedido['codigo']; ?>" class="btn btn-icon btn-primary">ver <i class="fas fa-arrow-right"></i><i class="fas fa-file-invoice-dollar"> </i></a>
+				            			                 <a target="_blank" href="/pedido/completado/?tokenPed=<?php echo $pedido['codigo']; ?>" class="btn btn-icon btn-primary">ver <i class="fas fa-arrow-right"></i><i class="fas fa-file-invoice-dollar"> </i></a>
 				            			             <?php } ?>
                                                      
                                                       

@@ -89,6 +89,7 @@
     <div class="row justify-content-center">
         <div class="col-md-5">
             <?php
+            <?php
 //MENSAJES DE ESTATUS
             if(isset($_COOKIE["msg"])) {
             require_once($_SERVER["DOCUMENT_ROOT"]."/include/msg.php");

@@ -15,7 +15,9 @@
 
   
     //OBTENER RANGO POR ID
-    $rol = $db->getAllRecords('roles','*',' AND id="'.($UserData['rol']).'"LIMIT 1 '[0]['nombre']);
+    $rol = $db->getAllRecords('roles','*',' AND id="'.($UserData['rol']).'"LIMIT 1 ');
+    $rol = $rol[0];
+    $rol = ($rol['nombre']);
 ?>
 <!DOCTYPE html>
 <html lang="es">

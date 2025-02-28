@@ -3343,7 +3343,8 @@ textarea.form-control {
   display: block;
   font-size: 16px;
   line-height: 26px;
-  margin-bottom: 0px;
+  margin-bottom: 13px;
+  min-height: 44px;
   font-weight: 400;
   color: #33b1e3;
 }
@@ -5140,6 +5141,7 @@ textarea.form-control {
 
 .ps-banner .ps-banner__thumnail .ps-banner__image {
   width: 100%;
+  height: 200px;
 }
 
 .ps-banner .bg-warning {
@@ -9096,6 +9098,10 @@ textarea.form-control {
   height: 100%;
   border-bottom: 1px solid #f0f2f5;
   border-right: 1px solid #f0f2f5;
+}
+
+.ps-categogy--grid .ps-product--standard .ps-product__title {
+  min-height: 50px;
 }
 
 .ps-categogy--grid .ps-product--standard .ps-product__branch {
