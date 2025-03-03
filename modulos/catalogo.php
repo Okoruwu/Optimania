@@ -1,16 +1,15 @@
 <?php
-//require 'conexion.php'; 
+require 'config.php'; 
 
-//try {
-  //  $query = "SELECT * FROM lentes";
-  //  $stmt = $pdo->prepare($query);
-   // $stmt->execute();
-   // $lentes = $stmt->fetchAll(PDO::FETCH_ASSOC);
-//} catch (PDOException $e) {
-  //  die("Error al obtener datos: " . $e->getMessage());  *Aqui es la consulta para mostrar en las tarjetas de acuerdo a la bd
-//}
+try {
+    $query = "SELECT * FROM products";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute();
+    $lentes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    die("Error al obtener datos: " . $e->getMessage());  
+}
 ?>
-
 
 
 <!DOCTYPE html>

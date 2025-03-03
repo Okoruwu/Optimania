@@ -3,9 +3,9 @@ date_default_timezone_set('America/Mazatlan');
 setlocale(LC_ALL, 'es_MX');
 
 include_once('include/Database.php');
-define('SS_DB_NAME', 'arketll6_optimania');
-define('SS_DB_USER', 'arketll6_optimania');
-define('SS_DB_PASSWORD', '+BEIlAnCVwef');
+define('SS_DB_NAME', 'optimania');
+define('SS_DB_USER', 'root');
+define('SS_DB_PASSWORD', '');
 define('SS_DB_HOST', 'localhost');
 
 $dsn	= 	"mysql:dbname=".SS_DB_NAME.";host=".SS_DB_HOST."";
