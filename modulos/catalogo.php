@@ -11,7 +11,6 @@ try {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -21,32 +20,27 @@ try {
   <link rel="stylesheet" href="../css/catalogo.css">
 </head>
 <body>
-  <div class="carousel">
-    <div class="carousel-inner">
 
-    
-    <?php foreach ($lentes as $lente): ?>
-            <article class="card-cat">
+<div class="carousel">
+    <div class="carousel-inner">
+        <?php foreach ($lentes as $lente): ?>
+            <article class="card-cat carousel-item">
                 <div class="card-int">
-                    <span class="card__span"><?= htmlspecialchars($lente['categoria']) ?></span>
+                    <span class="card__span"><?= htmlspecialchars($lente['category']) ?></span>
                     <div class="prev-img">
-                        <img class="img" src="<?= htmlspecialchars($lente['imagen']) ?>" alt="<?= htmlspecialchars($lente['nombre']) ?>">
+                        <img class="img" src="./imgcat/len1.jpg">
                     </div>
                     <div class="card-data">
-                        <p class="title"><?= htmlspecialchars($lente['nombre']) ?></p>
-                        <p><?= htmlspecialchars($lente['descripcion']) ?></p>
+                        <p class="title"><?= htmlspecialchars($lente['name']) ?></p>
                         <button class="button">Comprar -></button>
                     </div>
                 </div>
             </article>
-            <?php endforeach; ?>
-
-      </div>
+        <?php endforeach; ?>
     </div>
-
     <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
     <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
-  </div>
+</div>
 
   <script src="../js/carrusel.js"></script>
 </body>

@@ -1,6 +1,12 @@
+@font-face {
+  font-family: 'Romanica';
+  src: url('../modulos/fonts/Romanica.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .carousel {
   position: relative;
-  max-width: 1000px;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -10,6 +16,7 @@
 .carousel-inner {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  width: fit-content;
 }
 
 .carousel-item {
@@ -20,9 +27,9 @@
 
 
 .card-cat {
-  width: 100%;
+  width: 9vh;
   padding: 10px;
-  background-image: linear-gradient(to right bottom, #5d0391, #7b05ae, #9b05cb, #bd00e7, #bd00e7);
+  background-image: linear-gradient(to right bottom, #fb9349, #e6b653, #e4843d, #e4843d, #e4843d);
   background-size: 200% 200%;
   border-radius: 12px;
 }
@@ -49,9 +56,10 @@
 }
 
 .title {
-  font-weight: bold;
+  font-family: 'Romanica';
   font-size: 16px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .card-data {
@@ -60,7 +68,7 @@
 }
 
 .card__span {
-  font-family: 'Lucida Sans', sans-serif;
+  font-family: 'Romanica';
   font-size: 11px;
   position: absolute;
   top: 10px;
@@ -73,8 +81,8 @@
 .button {
   width: 100%;
   margin-top: 15px;
-  background-image: linear-gradient(to right bottom, #5d0391, #7b05ae, #9b05cb, #bd00e7, #bd00e7);
   background-size: 200% 200%;
+  background-color: #df972a;
   border: none;
   padding: 8px 10px;
   color: white;
@@ -88,18 +96,20 @@
   transform: translateY(3px);
 }
 
+.button:hover {
+  background-color: #2c9dac;
+  transition: background-color 0.3s ease;
+}
 
 .carousel-control {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgb(12 16 109 / 65%);
   color: white;
   border: none;
-  padding: 10px;
+  padding: 2vh;
   cursor: pointer;
-  font-size: 24px;
-  z-index: 10;
+  border-radius: 10vh;
 }
 
 .carousel-control.prev {
