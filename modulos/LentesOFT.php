@@ -1,20 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
 <?php
 include '../resources/head.php';
+include '../resources/carrito_functions.php';
 
 $categorias = [
     'Oftálmicos' => [
-        ['nombre' => 'Clásico Elegance', 'precio' => '1,499', 'imagen' => '../img/lentes/oft1.jpg', 'detalles' => ['Diseño ejecutivo premium', 'Materiales ultrarresistentes', 'Garantía de 2 años', 'Incluye estuche de protección']],
-        ['nombre' => 'Modern Vision Pro', 'precio' => '2,199', 'imagen' => '../img/lentes/oft2.jpg', 'detalles' => ['Tecnología anti-reflejo HD', 'Protección UV 400 completa', 'Lentes ultra delgados', 'Filtro luz azul']],
-        ['nombre' => 'UltraLight Comfort', 'precio' => '1,899', 'imagen' => '../img/lentes/oft3.jpg', 'detalles' => ['Peso ultraligero (menos de 15g)', 'Ajuste ergonómico perfecto', 'Material flexible hipoalergénico', 'Incluye funda deportiva']],
-        ['nombre' => 'Executive Design', 'precio' => '2,499', 'imagen' => '../img/lentes/oft4.jpg', 'detalles' => ['Diseño 100% personalizable', 'Tratamiento anti-fatiga digital', 'Estuche premium de regalo', 'Servicio de ajuste profesional']]
+        ['id' => hash('crc32', 'Oft1'), 'nombre' => 'Clásico Elegance', 'precio' => 1499, 'imagen' => '../img/lentes/oft1.jpg', 'detalles' => ['Diseño ejecutivo premium', 'Materiales ultrarresistentes', 'Garantía de 2 años', 'Incluye estuche de protección']],
+        ['id' => hash('crc32', 'Oft2'), 'nombre' => 'Modern Vision Pro', 'precio' => 2199, 'imagen' => '../img/lentes/oft2.jpg', 'detalles' => ['Tecnología anti-reflejo HD', 'Protección UV 400 completa', 'Lentes ultra delgados', 'Filtro luz azul']],
+        ['id' => hash('crc32', 'Oft3'), 'nombre' => 'UltraLight Comfort', 'precio' => 1899, 'imagen' => '../img/lentes/oft3.jpg', 'detalles' => ['Peso ultraligero (menos de 15g)', 'Ajuste ergonómico perfecto', 'Material flexible hipoalergénico', 'Incluye funda deportiva']],
+        ['id' => hash('crc32', 'Oft4'), 'nombre' => 'Executive Design', 'precio' => 2499, 'imagen' => '../img/lentes/oft4.jpg', 'detalles' => ['Diseño 100% personalizable', 'Tratamiento anti-fatiga digital', 'Estuche premium de regalo', 'Servicio de ajuste profesional']]
     ],
     'Sol' => [
-        ['nombre' => 'Aviador Premium', 'precio' => '1,299', 'imagen' => '../img/lentes/sol1.jpg'],
-        ['nombre' => 'Polarized Black', 'precio' => '1,599', 'imagen' => '../img/lentes/sol2.jpg'],
-        ['nombre' => 'Sport Edition', 'precio' => '1,799', 'imagen' => '../img/lentes/sol3.jpg'],
-        ['nombre' => 'Vintage Gold', 'precio' => '1,899', 'imagen' => '../img/lentes/sol4.jpg']
+        ['id' => hash('crc32', 'Sol1'), 'nombre' => 'Aviador Premium', 'precio' => 1299, 'imagen' => '../img/lentes/sol1.jpg'],
+        ['id' => hash('crc32', 'Sol2'), 'nombre' => 'Polarized Black', 'precio' => 1599, 'imagen' => '../img/lentes/sol2.jpg'],
+        ['id' => hash('crc32', 'Sol3'), 'nombre' => 'Sport Edition', 'precio' => 1799, 'imagen' => '../img/lentes/sol3.jpg'],
+        ['id' => hash('crc32', 'Sol4'), 'nombre' => 'Vintage Gold', 'precio' => 1899, 'imagen' => '../img/lentes/sol4.jpg']
     ]
 ];
 ?>
@@ -30,7 +29,6 @@ $categorias = [
                     class="img-fluid rounded-lg shadow" style="height: 300px; object-fit: cover; width: 100%;">
             </div>
 
-
             <div class="mb-5">
                 <div class="carrusel-contenedor">
                     <div class="carrusel">
@@ -43,15 +41,22 @@ $categorias = [
                                     </div>
                                     <div class="col-md-6">
                                         <h2 class="modelo-nombre"><?= $lente['nombre'] ?></h2>
-                                        <p class="modelo-precio">$<?= $lente['precio'] ?> MXN</p>
+                                        <p class="modelo-precio">$<?= number_format($lente['precio'], 2) ?> MXN</p>
                                         <ul class="detalles-lista">
                                             <?php foreach ($lente['detalles'] as $detalle): ?>
                                                 <li>✔️ <?= $detalle ?></li>
                                             <?php endforeach; ?>
                                         </ul>
-                                        <button class="btn btn-warning mt-3">
-                                            <i class="fa fa-eye mr-2"></i>Ver detalles
-                                        </button>
+                                        <form method="POST" class="form-agregar-carrito">
+                                            <input type="hidden" name="accion_carrito" value="agregar">
+                                            <input type="hidden" name="producto_id" value="<?= $lente['id'] ?>">
+                                            <input type="hidden" name="producto_nombre" value="<?= $lente['nombre'] ?>">
+                                            <input type="hidden" name="producto_precio" value="<?= $lente['precio'] ?>">
+                                            <input type="hidden" name="producto_imagen" value="<?= $lente['imagen'] ?>">
+                                            <button type="submit" class="btn btn-warning mt-3">
+                                                <i class="fa fa-cart-plus mr-2"></i>Añadir al carrito
+                                            </button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -66,12 +71,10 @@ $categorias = [
                 </div>
             </div>
 
-
             <div class="banner-populares mb-5">
                 <img src="../img/banners/BANNER-PAGINA1.png" alt="Los más populares" class="img-fluid rounded-lg shadow"
                     style="height: 250px; object-fit: cover; width: 100%; border: 3px solid #33b1e3;">
             </div>
-
 
             <div class="mb-5">
                 <h2 class="display-5 mb-4" style="color: #33b1e3; font-weight: 800;">Los + Populares</h2>
@@ -83,10 +86,17 @@ $categorias = [
                                     style="height: 250px; object-fit: cover;">
                                 <div class="card-body text-center">
                                     <h5 class="card-title" style="color: #f18500;"><?= $lente['nombre'] ?></h5>
-                                    <p class="h4 text-dark mb-3">$<?= $lente['precio'] ?> MXN</p>
-                                    <button class="btn btn-warning btn-block">
-                                        <i class="fa fa-shopping-cart mr-2"></i>Agregar a carrito
-                                    </button>
+                                    <p class="h4 text-dark mb-3">$<?= number_format($lente['precio'], 2) ?> MXN</p>
+                                    <form method="POST" class="form-agregar-carrito">
+                                        <input type="hidden" name="accion_carrito" value="agregar">
+                                        <input type="hidden" name="producto_id" value="<?= $lente['id'] ?>">
+                                        <input type="hidden" name="producto_nombre" value="<?= $lente['nombre'] ?>">
+                                        <input type="hidden" name="producto_precio" value="<?= $lente['precio'] ?>">
+                                        <input type="hidden" name="producto_imagen" value="<?= $lente['imagen'] ?>">
+                                        <button type="submit" class="btn btn-warning btn-block">
+                                            <i class="fa fa-cart-plus mr-2"></i>Agregar a carrito
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -99,7 +109,40 @@ $categorias = [
     <?php include '../resources/footer.php'; ?>
     <?php include '../resources/JS.php'; ?>
 
-    <script src="../js/lenOFT.js"> </script>
+    <script src="../js/lenOFT.js"></script>
+
+    <script>
+        document.querySelectorAll('.form-agregar-carrito').forEach(form => {
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                try {
+                    const response = await fetch('', {
+                        method: 'POST',
+                        body: new FormData(form)
+                    });
+
+                    const badge = document.querySelector('#cart-mini .badge');
+                    badge.textContent = <?= cantidadProductos() ?>;
+
+                    const button = form.querySelector('button');
+                    const originalHTML = button.innerHTML;
+                    button.innerHTML = '<i class="fa fa-check mr-2"></i>¡Agregado!';
+                    button.classList.add('btn-success');
+                    button.classList.remove('btn-warning');
+
+                    setTimeout(() => {
+                        button.innerHTML = originalHTML;
+                        button.classList.remove('btn-success');
+                        button.classList.add('btn-warning');
+                    }, 2000);
+
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

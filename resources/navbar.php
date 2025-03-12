@@ -1,3 +1,7 @@
+<?php
+require_once 'carrito_functions.php';
+?>
+
 <header class="ps-header ps-header--1">
     <div class="ps-noti">
         <div class="container">
@@ -32,12 +36,32 @@
                     </li>
 
                     <li><a class="ps-header__item" href="#" id="cart-mini"><i class="icon-cart-empty"></i><span
-                                class="badge">1</span></a>
+                                class="badge"><?= cantidadProductos() ?></span></a>
                         <div class="ps-cart--mini">
+                            <?php if (!empty($_SESSION['carrito'])): ?>
+                                <?php foreach ($_SESSION['carrito'] as $item): ?>
+                                    <div class="ps-cart__item">
+                                        <img src="<?= $item['imagen'] ?>" alt="<?= $item['nombre'] ?>" width="60">
+                                        <div class="ps-cart__content">
+                                            <p><?= $item['nombre'] ?> (x<?= $item['cantidad'] ?>)</p>
+                                            <small>$<?= number_format($item['precio'] * $item['cantidad'], 2) ?></small>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
+                            <?php else: ?>
+                                <div class="ps-cart__item">
+                                    <p>Carrito vacío</p>
+                                </div>
+                            <?php endif; ?>
 
-                            <div class="ps-cart__total"><span>Subtotal </span><span>$0</span></div>
-                            <div class="ps-cart__footer"><a class="ps-btn ps-btn--outline" href="#">Ver carrito</a><a
-                                    class="ps-btn ps-btn--warning" href="#">Pagar</a></div>
+                            <div class="ps-cart__total">
+                                <span>Subtotal</span>
+                                <span>$<?= number_format(calcularTotal(), 2) ?></span>
+                            </div>
+                            <div class="ps-cart__footer">
+                                <a class="ps-btn ps-btn--outline" href="carrito.php">Ver carrito</a>
+                                <a class="ps-btn ps-btn--warning" href="checkout.php">Pagar</a>
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -141,3 +165,31 @@
         </div>
     </div>
 </header>
+<script>
+    document.querySelectorAll('.form-agregar-carrito').forEach(form => {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            try {
+                const response = await fetch('', {
+                    method: 'POST',
+                    body: new FormData(form)
+                });
+
+                const badge = document.querySelector('#cart-mini .badge');
+                badge.textContent = parseInt(badge.textContent) + 1;
+
+                const miniCart = document.querySelector('.ps-cart--mini');
+                fetch(location.href)
+                    .then(r => r.text())
+                    .then(html => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+                        miniCart.innerHTML = doc.querySelector('.ps-cart--mini').innerHTML;
+                    });
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+    });
+</script>
