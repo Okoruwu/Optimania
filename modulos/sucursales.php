@@ -121,12 +121,7 @@ $tiendas = [
     <?php include '../resources/footer.php'; ?>
     <?php include '../resources/JS.php'; ?>
 
-    <script>
-        function actualizarMapa(mapaUrl) {
-            const iframe = document.getElementById('dynamicMap');
-            iframe.src = mapaUrl;
-        }
-    </script>
+    <script src="../js/sub.js"> </script>
 
 
 </body>

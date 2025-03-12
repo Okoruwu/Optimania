@@ -26,4 +26,9 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/home-1.css">
     <link rel="stylesheet" href="../css/home-16.css">
+    <link rel="stylesheet" href="../css/home-17.css">
+    <link rel="stylesheet" href="../css/home-18.css">    
+    <link rel="stylesheet" href="../css/home-19.css">
+    <link rel="stylesheet" href="../css/home-20.css">
+    <link rel="stylesheet" href="../css/home-21.css">         
 </head>

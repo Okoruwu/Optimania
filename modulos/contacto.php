@@ -80,43 +80,6 @@ include '../resources/navbar.php';
     </div>
 </section>
 
-<style>
-    .faq-card {
-        border-radius: 15px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-    }
-
-    .faq-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(51, 177, 227, 0.2);
-    }
-
-    .bg-azul-opti {
-        background-color: #33b1e3 !important;
-        border-radius: 15px 15px 0 0 !important;
-    }
-
-    .bg-naranja-opti {
-        background-color: #f18500 !important;
-        border-radius: 15px 15px 0 0 !important;
-    }
-
-    .list-group-item {
-        border: none;
-        padding: 1rem 1.5rem;
-        background: transparent;
-    }
-
-    .list-group-item:hover {
-        background-color: rgba(241, 133, 0, 0.05);
-    }
-
-    .card-header {
-        padding: 1.5rem;
-    }
-</style>
-
 <?php
 include '../resources/footer.php';
 include '../resources/JS.php';

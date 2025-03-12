@@ -1,0 +1,120 @@
+.carrusel-contenedor {
+    max-width: 1200px;
+    margin: 2rem auto;
+    position: relative;
+    overflow: hidden;
+    padding: 0 50px;
+}
+
+.carrusel {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: grab;
+    user-select: none;
+}
+
+.carrusel.grabbing {
+    cursor: grabbing;
+    transition: none;
+}
+
+.botones-carrusel {
+    position: absolute;
+    top: 50%;
+    width: calc(100% - 100px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.boton-carrusel {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    pointer-events: all;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton-carrusel:hover {
+    transform: scale(1.1);
+    background: #33b1e3;
+    color: white;
+}
+
+.lente {
+    min-width: 100%;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    margin: 0 10px;
+    flex-shrink: 0;
+}
+
+.indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 2rem;
+}
+
+.indicador {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #dfe6e9;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicador.activo {
+    background: #33b1e3;
+    transform: scale(1.2);
+}
+
+.btn-warning {
+    background: #f18500;
+    border-color: #f18500;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.detalles-lista {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.detalles-lista li {
+    margin: 1rem 0;
+    padding: 0.8rem;
+    background: #f8f9fa;
+    border-left: 4px solid #33b1e3;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .carrusel-contenedor {
+        padding: 0 20px;
+    }
+
+    .botones-carrusel {
+        width: calc(100% - 40px);
+    }
+
+    .banner-catalogo img {
+        height: 200px !important;
+    }
+}
