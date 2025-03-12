@@ -1,181 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <link href="img/favicon.png" rel="apple-touch-icon-precomposed">
-    <link href="img/favicon.png" rel="shortcut icon" type="image/png">
-    <meta name="author" content="">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <title>Optimania</title>
-    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="fonts/Linearicons/Font/demo-files/demo.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com/">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Jost:400,500,600,700&amp;display=swap&amp;ver=1607580870">
-    <link rel="stylesheet" href="plugins/bootstrap4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="plugins/owl-carousel/assets/owl.carousel.css">
-    <link rel="stylesheet" href="plugins/slick/slick/slick.css">
-    <link rel="stylesheet" href="plugins/lightGallery/dist/css/lightgallery.min.css">
-    <link rel="stylesheet" href="plugins/jquery-bar-rating/dist/themes/fontawesome-stars.css">
-    <link rel="stylesheet" href="plugins/select2/dist/css/select2.min.css">
-    <link rel="stylesheet" href="plugins/lightGallery/dist/css/lightgallery.min.css">
-    <link rel="stylesheet" href="plugins/noUiSlider/nouislider.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/home-1.css">
-</head>
+<?php include 'resources/head.php'; ?>
 
 <body>
     <div class="ps-page">
-        <header class="ps-header ps-header--1">
-            <div class="ps-noti">
-                <div class="container">
-                    <p class="m-0">Las mejores ofertas solo en <b>Optimania</b> las podras encontrar.</p>
-                </div><a class="ps-noti__close"><i class="icon-cross"></i></a>
-            </div>
-
-
-            <div class="ps-header__middle">
-                <div class="container">
-                    <div class="ps-logo"><a href="/"> <img src="img/logo.png" alt><img class="sticky-logo"
-                                src="img/sticky-logo.png" alt></a></div><a class="ps-menu--sticky" href="#"><i
-                            class="fa fa-bars"></i></a>
-                    <div class="ps-header__right">
-                        <ul class="ps-header__icons">
-                            <li><a class="ps-header__item open-search" href="#"><i class="icon-magnifier"></i></a></li>
-                            <li><a class="ps-header__item" href="#" id="login-modal"><i class="icon-user"></i></a>
-                                <div class="ps-login--modal">
-                                    <form method="get" action="http://nouthemes.net/html/mymedi/do_action">
-                                        <div class="form-group">
-                                            <label>Correo electrónico</label>
-                                            <input class="form-control" type="text">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Contraseña</label>
-                                            <input class="form-control" type="password">
-                                        </div>
-
-                                        <button class="ps-btn ps-btn--warning" type="submit">Acceder</button>
-                                    </form>
-                                </div>
-                            </li>
-
-                            <li><a class="ps-header__item" href="#" id="cart-mini"><i class="icon-cart-empty"></i><span
-                                        class="badge">1</span></a>
-                                <div class="ps-cart--mini">
-
-                                    <div class="ps-cart__total"><span>Subtotal </span><span>$0</span></div>
-                                    <div class="ps-cart__footer"><a class="ps-btn ps-btn--outline" href="#">Ver
-                                            carrito</a><a class="ps-btn ps-btn--warning" href="#">Pagar</a></div>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="ps-language-currency"><a class="ps-dropdown-value" href="javascript:void(0);"
-                                data-toggle="modal" data-target="#popupLanguage">Español</a></div>
-                        <div class="ps-header__search">
-                            <form action="" method="post">
-                                <div class="ps-search-table">
-                                    <div class="input-group">
-                                        <input class="form-control ps-input" type="text" placeholder="Buscar...">
-                                        <div class="input-group-append"><a href="#"><i class="fa fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="ps-navigation">
-                <div class="container">
-                    <div class="ps-navigation__left">
-
-
-                        <nav class="ps-main-menu">
-                            <ul class="menu">
-                                <li class="has-mega-menu"><a href="/">Inicio</a></li>
-                                <li class="has-mega-menu"><a href="#"> Lentes<span class="sub-toggle"><i
-                                                class="fa fa-chevron-down"></i></span></a>
-                                    <div class="mega-menu">
-                                        <div class="container">
-                                            <div class="mega-menu__row">
-
-                                                <div class="mega-menu__column col-12 col-md-4">
-                                                    <div class="ps-promo">
-                                                        <div class="ps-promo__item"><img class="ps-promo__banner"
-                                                                src="img/promotion/01.jpg" alt="alt" />
-                                                            <div class="ps-promo__content">
-                                                                <h4 class="mb-20 ps-promo__name">de Sol</h4>
-                                                                <a class="ps-promo__btn" href="#">Ver</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="mega-menu__column col-12 col-md-4">
-                                                    <div class="ps-promo">
-                                                        <div class="ps-promo__item"><img class="ps-promo__banner"
-                                                                src="img/promotion/02.jpg" alt="alt" />
-                                                            <div class="ps-promo__content">
-                                                                <h4 class="mb-20 ps-promo__name">Oftalomológicos</h4>
-                                                                <a class="ps-promo__btn" href="#">Ver</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mega-menu__column col-12 col-md-4">
-                                                    <div class="ps-promo">
-                                                        <div class="ps-promo__item"><img class="ps-promo__banner"
-                                                                src="img/promotion/03.jpg" alt="alt" />
-                                                            <div class="ps-promo__content">
-                                                                <h4 class="ps-promo__name">de Contacto</h4>
-                                                                <a class="ps-promo__btn" href="#">Ver</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="has-mega-menu"><a href="modulos/sucursales.php">Sucursales</a></li>
-                                <li class="has-mega-menu"><a href="#">Promociones</a></li>
-                                <li class="has-mega-menu"><a href="#">Centro Auditivo</a></li>
-                                <li class="has-mega-menu"><a href="#">Contacto</a></li>
-                            </ul>
-                        </nav>
-
-
-                    </div>
-                    <div class="ps-navigation__right">¿Necesitas ayuda? <strong><a href="tel:+52 624 100 2030">+52 624
-                                100 2030</a></strong></div>
-                </div>
-            </div>
-        </header>
-        <header class="ps-header ps-header--1 ps-header--mobile">
-            <div class="ps-noti">
-                <div class="container">
-                    <p class="m-0">Lorem ipsum dolor <b>sit amet, consectetur</b> adipisicing elit.</p>
-                </div><a class="ps-noti__close"><i class="icon-cross"></i></a>
-            </div>
-            <div class="ps-header__middle">
-                <div class="container">
-                    <div class="ps-logo"><a href="/"> <img src="img/mobile-logo.png" alt></a></div>
-                    <div class="ps-header__right">
-                        <ul class="ps-header__icons">
-                            <li><a class="ps-header__item open-search" href="#"><i class="fa fa-search"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </header>
-
+        <?php require_once 'resources/config2.php';
+        require_once 'resources/navbar.php'; ?>
 
         <div class="ps-home">
             <section class="ps-section--banner">
@@ -190,7 +21,7 @@
                     <div class="ps-banner" style="background:#f9c77d;">
                         <div class="container-fluid">
                             <div class="ps-banner__block">
-                                <img src="img/banner.jpg" alt="">
+                                <img src="banner.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -222,7 +53,7 @@
 
                         <div class="ps-banner__btn-group">
                             <div class="ps-banner__btn">
-                                <img style="width: 100px;" src="img/5-02.png" alt>
+                                <img style="width: 100px;" src="5-02.png" alt>
                                 <p>Descubrirás el amor a primera vista con
                                     <br>nuestros diseños que te encantarán.
                                 </p>
@@ -230,7 +61,7 @@
                         </div>
                         <div class="ps-banner__btn-group">
                             <div class="ps-banner__btn">
-                                <img style="width: 100px;" src="img/7-02.png" alt>
+                                <img style="width: 100px;" src="7-02.png" alt>
                                 <p>Encontrarás productos resistentes, estéticos y
                                     <br>funcionales que conectarán con tú estilo.
                                 </p>
@@ -239,7 +70,7 @@
 
                     </div>
                     <div class="ps-banner__thumnail"><img class="ps-banner__round" src="img/round5.png" alt><img
-                            class="ps-banner__image" src="img/4-02.png" alt></div>
+                            class="ps-banner__image" src="4-02.png" alt></div>
                 </div>
             </div>
         </section>
@@ -247,7 +78,7 @@
 
         <section class="ps-section--latest pt-4 mt-4">
             <div class="container">
-                <img src="img/agenda.png" alt="" class="img-fluid mb-4">
+                <img src="agenda.png" alt="" class="img-fluid mb-4">
                 <h3 class="ps-section__title mt-4">Nuestras Sucursales</h3>
                 <div class="ps-section__carousel">
                     <div class="owl-carousel" data-owl-auto="false" data-owl-loop="true" data-owl-speed="13000"
@@ -255,12 +86,8 @@
                         data-owl-item-sm="2" data-owl-item-md="3" data-owl-item-lg="5" data-owl-item-xl="5"
                         data-owl-duration="1000" data-owl-mousedrag="on">
 
-
-
                         <div class="ps-section__product">
                             <div class="ps-product ps-product--standard">
-
-
                                 <div class="ps-product__content text-center">
                                     <h4 style="line-height: 30px; font-size: 18px;"
                                         class="mt-4 ps-section__title text-center">Optimania la Pilita Metepec</h4>
@@ -273,59 +100,16 @@
                                     <p style="line-height: 20px;"><b>Horarios:</b><br>Lunes a domingo 11: 00 AM a 8:00
                                         PM</p>
                                     <a class="ps-btn ps-btn--warning w-80" href="">Agendar cita</a>
-
-
                                 </div>
                             </div>
                         </div>
-
 
                     </div>
                 </div>
             </div>
         </section>
 
-
-
-
-        <footer class="ps-footer ps-footer--1">
-
-            <div class="container">
-                <div class="ps-footer__middle">
-                    <div class="row">
-                        <div class="col-12 col-md-12">
-                            <div class="row justify-content-center">
-                                <div class="col-12 col-md-6 text-center">
-                                    <div class="ps-footer--address">
-                                        <div class="ps-logo">
-                                            <a href="/"><img class="img-fluid" src="img/sticky-logo.png" alt></a>
-                                        </div>
-                                        <div class="ps-footer__title">Our store</div>
-                                        <p>Direccion de la sucursal matriz<br>Estado de México, México.</p>
-                                        <ul class="ps-social">
-                                            <li><a class="ps-social__link facebook" href="#"><i class="fa fa-facebook">
-                                                    </i><span class="ps-tooltip">Facebook</span></a></li>
-                                            <li><a class="ps-social__link instagram" href="#"><i
-                                                        class="fa fa-instagram"></i><span
-                                                        class="ps-tooltip">Instagram</span></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="ps-footer--bottom">
-                    <div class="row">
-                        <div class="col-12 col-md-12">
-                            <p>Copyright © 2022 Optimania. Todos los derechos reservados.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <?php include 'resources/footer.php'; ?>
     </div>
     <div class="ps-search">
         <div class="ps-search__content ps-search--mobile"><a class="ps-search__close" href="#" id="close-search"><i
@@ -412,23 +196,28 @@
                                         <div class="ps-gallery--image">
                                             <div class="slide">
                                                 <div class="ps-gallery__item"><img src="img/products/001.jpg"
-                                                        alt="alt" /></div>
+                                                        alt="alt" />
+                                                </div>
                                             </div>
                                             <div class="slide">
                                                 <div class="ps-gallery__item"><img src="img/products/047.jpg"
-                                                        alt="alt" /></div>
+                                                        alt="alt" />
+                                                </div>
                                             </div>
                                             <div class="slide">
                                                 <div class="ps-gallery__item"><img src="img/products/047.jpg"
-                                                        alt="alt" /></div>
+                                                        alt="alt" />
+                                                </div>
                                             </div>
                                             <div class="slide">
                                                 <div class="ps-gallery__item"><img src="img/products/008.jpg"
-                                                        alt="alt" /></div>
+                                                        alt="alt" />
+                                                </div>
                                             </div>
                                             <div class="slide">
                                                 <div class="ps-gallery__item"><img src="img/products/034.jpg"
-                                                        alt="alt" /></div>
+                                                        alt="alt" />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -682,7 +471,8 @@
                                             <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
                                                 title="Add to cart"><a href="#" data-toggle="modal"
                                                     data-target="#popupAddcart"><i
-                                                        class="fa fa-shopping-basket"></i></a></div>
+                                                        class="fa fa-shopping-basket"></i></a>
+                                            </div>
                                         </div>
                                         <div class="ps-product__badge">
                                             <div class="ps-badge ps-badge--sale">Sale</div>
@@ -729,10 +519,12 @@
                                             </div>
                                             <div class="ps-product__item cart" data-toggle="tooltip"
                                                 data-placement="left" title="Add to cart"><a href="#"><i
-                                                        class="fa fa-shopping-basket"></i></a></div>
+                                                        class="fa fa-shopping-basket"></i></a>
+                                            </div>
                                             <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
                                                 title="Wishlist"><a href="wishlist.html"><i
-                                                        class="fa fa-heart-o"></i></a></div>
+                                                        class="fa fa-heart-o"></i></a>
+                                            </div>
                                             <div class="ps-product__item rotate" data-toggle="tooltip"
                                                 data-placement="left" title="Add to compare"><a href="compare.html"><i
                                                         class="fa fa-align-left"></i></a></div>
@@ -811,7 +603,8 @@
                                             <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
                                                 title="Add to cart"><a href="#" data-toggle="modal"
                                                     data-target="#popupAddcart"><i
-                                                        class="fa fa-shopping-basket"></i></a></div>
+                                                        class="fa fa-shopping-basket"></i></a>
+                                            </div>
                                         </div>
                                         <div class="ps-product__badge">
                                             <div class="ps-badge ps-badge--sale">Sale</div>
@@ -858,10 +651,12 @@
                                             </div>
                                             <div class="ps-product__item cart" data-toggle="tooltip"
                                                 data-placement="left" title="Add to cart"><a href="#"><i
-                                                        class="fa fa-shopping-basket"></i></a></div>
+                                                        class="fa fa-shopping-basket"></i></a>
+                                            </div>
                                             <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
                                                 title="Wishlist"><a href="wishlist.html"><i
-                                                        class="fa fa-heart-o"></i></a></div>
+                                                        class="fa fa-heart-o"></i></a>
+                                            </div>
                                             <div class="ps-product__item rotate" data-toggle="tooltip"
                                                 data-placement="left" title="Add to compare"><a href="compare.html"><i
                                                         class="fa fa-align-left"></i></a></div>
@@ -888,7 +683,8 @@
                                             <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
                                                 title="Add to cart"><a href="#" data-toggle="modal"
                                                     data-target="#popupAddcart"><i
-                                                        class="fa fa-shopping-basket"></i></a></div>
+                                                        class="fa fa-shopping-basket"></i></a>
+                                            </div>
                                         </div>
                                         <div class="ps-product__badge">
                                         </div>
@@ -934,10 +730,12 @@
                                             </div>
                                             <div class="ps-product__item cart" data-toggle="tooltip"
                                                 data-placement="left" title="Add to cart"><a href="#"><i
-                                                        class="fa fa-shopping-basket"></i></a></div>
+                                                        class="fa fa-shopping-basket"></i></a>
+                                            </div>
                                             <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
                                                 title="Wishlist"><a href="wishlist.html"><i
-                                                        class="fa fa-heart-o"></i></a></div>
+                                                        class="fa fa-heart-o"></i></a>
+                                            </div>
                                             <div class="ps-product__item rotate" data-toggle="tooltip"
                                                 data-placement="left" title="Add to compare"><a href="compare.html"><i
                                                         class="fa fa-align-left"></i></a></div>
@@ -964,7 +762,8 @@
                                             <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
                                                 title="Add to cart"><a href="#" data-toggle="modal"
                                                     data-target="#popupAddcart"><i
-                                                        class="fa fa-shopping-basket"></i></a></div>
+                                                        class="fa fa-shopping-basket"></i></a>
+                                            </div>
                                         </div>
                                         <div class="ps-product__badge">
                                             <div class="ps-badge ps-badge--hot">Hot</div>
@@ -1010,10 +809,12 @@
                                             </div>
                                             <div class="ps-product__item cart" data-toggle="tooltip"
                                                 data-placement="left" title="Add to cart"><a href="#"><i
-                                                        class="fa fa-shopping-basket"></i></a></div>
+                                                        class="fa fa-shopping-basket"></i></a>
+                                            </div>
                                             <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
                                                 title="Wishlist"><a href="wishlist.html"><i
-                                                        class="fa fa-heart-o"></i></a></div>
+                                                        class="fa fa-heart-o"></i></a>
+                                            </div>
                                             <div class="ps-product__item rotate" data-toggle="tooltip"
                                                 data-placement="left" title="Add to compare"><a href="compare.html"><i
                                                         class="fa fa-align-left"></i></a></div>
@@ -1024,27 +825,16 @@
                         </div>
                         <div class="ps-addcart__footer"><a class="ps-btn ps-btn--border" href="#" data-dismiss="modal"
                                 aria-label="Close">No thanks :(</a><a class="ps-btn ps-btn--warning" href="#">Continue
-                                to Cart</a></div>
+                                to
+                                Cart</a></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="plugins/jquery.min.js"></script>
-    <script src="plugins/popper.min.js"></script>
-    <script src="plugins/bootstrap4/js/bootstrap.min.js"></script>
-    <script src="plugins/select2/dist/js/select2.full.min.js"></script>
-    <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
-    <script src="plugins/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
-    <script src="plugins/lightGallery/dist/js/lightgallery-all.min.js"></script>
-    <script src="plugins/slick/slick/slick.min.js"></script>
-    <script src="plugins/noUiSlider/nouislider.min.js"></script>
-    <!-- custom code-->
-    <script src="js/main.js"></script>
+
+
+    <?php include 'resources/JS.php'; ?>
 </body>
-
-
-<!-- Mirrored from nouthemes.net/html/mymedi// by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Aug 2022 18:50:42 GMT -->
 
 </html>

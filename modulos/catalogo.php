@@ -22,54 +22,29 @@ try {
 </head>
 
 <body>
+  <?php foreach ($lentes as $lente): ?>
+    <article class="card-cat">
+      <div class="card-int">
+        <span class="card__span"><?= htmlspecialchars($lente['categoria']) ?></span>
+        <div class="prev-img">
+          <img class="img" src="<?= htmlspecialchars($lente['imagen']) ?>"
+            alt="<?= htmlspecialchars($lente['nombre']) ?>">
+        </div>
+        <div class="card-data">
+          <p class="title"><?= htmlspecialchars($lente['nombre']) ?></p>
+          <p><?= htmlspecialchars($lente['descripcion']) ?></p>
+          <button class="button">Comprar -></button>
+        </div>
+      </div>
+    </article>
+  <?php endforeach; ?>
 
-<<<<<<< HEAD
-
-      <?php foreach ($lentes as $lente): ?>
-        <article class="card-cat">
-          <div class="card-int">
-            <span class="card__span"><?= htmlspecialchars($lente['categoria']) ?></span>
-            <div class="prev-img">
-              <img class="img" src="<?= htmlspecialchars($lente['imagen']) ?>"
-                alt="<?= htmlspecialchars($lente['nombre']) ?>">
-            </div>
-            <div class="card-data">
-              <p class="title"><?= htmlspecialchars($lente['nombre']) ?></p>
-              <p><?= htmlspecialchars($lente['descripcion']) ?></p>
-              <button class="button">Comprar -></button>
-            </div>
-          </div>
-        </article>
-      <?php endforeach; ?>
-
-    </div>
+  </div>
   </div>
 
   <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
   <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
   </div>
-=======
-<div class="carousel">
-    <div class="carousel-inner">
-        <?php foreach ($lentes as $lente): ?>
-            <article class="card-cat carousel-item">
-                <div class="card-int">
-                    <span class="card__span"><?= htmlspecialchars($lente['category']) ?></span>
-                    <div class="prev-img">
-                        <img class="img" src="./imgcat/len1.jpg">
-                    </div>
-                    <div class="card-data">
-                        <p class="title"><?= htmlspecialchars($lente['name']) ?></p>
-                        <button class="button">Comprar -></button>
-                    </div>
-                </div>
-            </article>
-        <?php endforeach; ?>
-    </div>
-    <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
-    <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
-</div>
->>>>>>> ae1b6146a4cf40dda685cda3e8382801391b0712
 
   <script src="../js/carrusel.js"></script>
 </body>
