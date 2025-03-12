@@ -19,69 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <head>
     <?php include '../resources/head.php'; ?>
+    <link rel="stylesheet" href="../css/home-23.css">
     <title>Pagar - Optimania</title>
-    <style>
-        .checkout-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
 
-        .form-checkout {
-            background: #fff;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            padding: 2rem;
-        }
-
-        .input-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .input-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #2D3436;
-            font-weight: 500;
-        }
-
-        .input-group input,
-        .input-group select {
-            width: 100%;
-            padding: 0.8rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .input-group input:focus {
-            border-color: #33b1e3;
-            box-shadow: 0 0 0 3px rgba(51, 177, 227, 0.2);
-        }
-
-        .resumen-pago {
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 2rem;
-        }
-
-        .metodo-pago {
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .metodo-pago:hover {
-            border-color: #33b1e3;
-        }
-
-        .metodo-pago.active {
-            border-color: #f18500;
-            background: rgba(241, 133, 0, 0.05);
-        }
-    </style>
 </head>
 
 <body>
@@ -238,16 +178,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <?php include '../resources/footer.php'; ?>
 
-    <script>
-        document.querySelectorAll('input[name="metodo_pago"]').forEach(radio => {
-            radio.addEventListener('change', (e) => {
-                document.querySelectorAll('.metodo-pago').forEach(div => {
-                    div.classList.remove('active');
-                });
-                e.target.closest('.metodo-pago').classList.add('active');
-            });
-        });
-    </script>
+    <script src="../js/pay.js"></script>
 </body>
 
 </html>
