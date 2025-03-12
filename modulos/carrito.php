@@ -35,33 +35,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <head>
     <?php include '../resources/head.php'; ?>
+    <link rel="stylesheet" href="../css/home-22.css">
     <title>Carrito de Compras - Optimania</title>
-    <style>
-        .cart-table img {
-            max-width: 80px;
-            border-radius: 8px;
-        }
-
-        .quantity-input {
-            width: 70px;
-            text-align: center;
-        }
-
-        .cart-totals {
-            background: #f8f9fa;
-            border-radius: 12px;
-            padding: 2rem;
-        }
-
-        .btn-eliminar {
-            color: #dc3545;
-            transition: all 0.3s ease;
-        }
-
-        .btn-eliminar:hover {
-            transform: scale(1.1);
-        }
-    </style>
 </head>
 
 <body>
@@ -175,13 +150,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <?php include '../resources/footer.php'; ?>
 
-    <script>
-        document.querySelectorAll('.quantity-input').forEach(input => {
-            input.addEventListener('change', (e) => {
-                if (e.target.value < 1) e.target.value = 1;
-            });
-        });
-    </script>
+    <script src="../js/cart.js"> </script>
 </body>
 
 </html>
