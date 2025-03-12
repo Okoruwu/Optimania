@@ -153,7 +153,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <a href="productos.php" class="btn btn-outline-warning">
                                     <i class="fas fa-arrow-left me-2"></i>Seguir Comprando
                                 </a>
-                                <a href="checkout.php" class="btn btn-warning">
+                                <a href="pagar.php" class="btn btn-warning">
                                     <i class="fas fa-lock me-2"></i>Pagar Ahora
                                 </a>
                             </div>
