@@ -2,22 +2,26 @@
 include '../resources/head.php';
 include '../resources/carrito_functions.php';
 
-$categorias = [
-    'Mensuales' => [
-        ['id' => hash('crc32', 'Mensual1'), 'nombre' => 'Lente Mensual Premium', 'precio' => 599, 'imagen' => '../img/lentes/mensual1.jpg', 'detalles' => ['Hidratación prolongada', 'Material de silicona', 'Protección UV', 'Paquete de 6 unidades']],
-        ['id' => hash('crc32', 'Mensual2'), 'nombre' => 'Confort Vision+', 'precio' => 699, 'imagen' => '../img/lentes/mensual2.jpg', 'detalles' => ['Tecnología HD', 'Diseño ultra-fino', 'Oxigenación máxima', 'Para uso diario']]
-    ],
-    'Anuales' => [
-        ['id' => hash('crc32', 'Anual1'), 'nombre' => 'Anual Pro Comfort', 'precio' => 1299, 'imagen' => '../img/lentes/anual1.jpg', 'detalles' => ['Duración 12 meses', 'Material orgánico', 'Protección integral', 'Incluye solución limpiadora']],
-        ['id' => hash('crc32', 'Anual2'), 'nombre' => 'YearLens Elite', 'precio' => 1499, 'imagen' => '../img/lentes/anual2.jpg', 'detalles' => ['Tecnología anti-depósitos', 'Hidratación 24/7', 'Garantía de 1 año', 'Estuche premium']]
-    ],
-    'Extras' => [
-        ['id' => hash('crc32', 'Extra1'), 'nombre' => 'Estuche de viaje', 'precio' => 199, 'imagen' => '../img/extras/estuche.jpg'],
-        ['id' => hash('crc32', 'Extra2'), 'nombre' => 'Solución limpiadora', 'precio' => 299, 'imagen' => '../img/extras/solucion.jpg'],
-        ['id' => hash('crc32', 'Extra3'), 'nombre' => 'Gotas humectantes', 'precio' => 249, 'imagen' => '../img/extras/gotas.jpg'],
-        ['id' => hash('crc32', 'Extra4'), 'nombre' => 'Kit de limpieza', 'precio' => 349, 'imagen' => '../img/extras/kit.jpg']
-    ]
-];
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        $categoria = $row['categoria'];
+        $detalles = $row['detalles'] ? explode(', ', $row['detalles']) : [];
+
+        $producto = [
+            'id' => $row['id'],
+            'nombre' => $row['nombre'],
+            'precio' => $row['precio'],
+            'imagen' => $row['imagen'],
+            'detalles' => $detalles
+        ];
+
+        if (!isset($categorias[$categoria])) {
+            $categorias[$categoria] = [];
+        }
+
+        $categorias[$categoria][] = $producto;
+    }
+}
 ?>
 
 <body>
@@ -140,39 +144,7 @@ $categorias = [
 
     <script src="../js/lenCONT.js"></script>
 
-    <script>
-        document.querySelectorAll('.form-agregar-carrito').forEach(form => {
-            form.addEventListener('submit', async (e) => {
-                e.preventDefault();
-
-                try {
-                    const response = await fetch('', {
-                        method: 'POST',
-                        body: new FormData(form)
-                    });
-
-                    const badge = document.querySelector('#cart-mini .badge');
-                    badge.textContent = <?= cantidadProductos() ?>;
-
-                    const button = form.querySelector('button');
-                    button.innerHTML = '<i class="fa fa-check mr-2"></i>¡Agregado!';
-                    button.classList.add('btn-success');
-                    button.classList.remove('btn-warning', 'btn-outline-warning');
-
-                    setTimeout(() => {
-                        button.innerHTML = '<i class="fa fa-cart-plus mr-2"></i>' +
-                            (button.textContent.includes('Añadir') ? 'Añadir' : 'Agregar');
-                        button.classList.remove('btn-success');
-                        button.classList.add(button.classList.contains('btn-outline-warning') ?
-                            'btn-outline-warning' : 'btn-warning');
-                    }, 2000);
-
-                } catch (error) {
-                    console.error('Error:', error);
-                }
-            });
-        });
-    </script>
+    <script src="../js/cartCONT.js"></script>
 </body>
 
 </html>

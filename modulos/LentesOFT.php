@@ -2,20 +2,20 @@
 include '../resources/head.php';
 include '../resources/carrito_functions.php';
 
-$categorias = [
-    'Oftálmicos' => [
-        ['id' => hash('crc32', 'Oft1'), 'nombre' => 'Clásico Elegance', 'precio' => 1499, 'imagen' => '../img/lentes/oft1.jpg', 'detalles' => ['Diseño ejecutivo premium', 'Materiales ultrarresistentes', 'Garantía de 2 años', 'Incluye estuche de protección']],
-        ['id' => hash('crc32', 'Oft2'), 'nombre' => 'Modern Vision Pro', 'precio' => 2199, 'imagen' => '../img/lentes/oft2.jpg', 'detalles' => ['Tecnología anti-reflejo HD', 'Protección UV 400 completa', 'Lentes ultra delgados', 'Filtro luz azul']],
-        ['id' => hash('crc32', 'Oft3'), 'nombre' => 'UltraLight Comfort', 'precio' => 1899, 'imagen' => '../img/lentes/oft3.jpg', 'detalles' => ['Peso ultraligero (menos de 15g)', 'Ajuste ergonómico perfecto', 'Material flexible hipoalergénico', 'Incluye funda deportiva']],
-        ['id' => hash('crc32', 'Oft4'), 'nombre' => 'Executive Design', 'precio' => 2499, 'imagen' => '../img/lentes/oft4.jpg', 'detalles' => ['Diseño 100% personalizable', 'Tratamiento anti-fatiga digital', 'Estuche premium de regalo', 'Servicio de ajuste profesional']]
-    ],
-    'Sol' => [
-        ['id' => hash('crc32', 'Sol1'), 'nombre' => 'Aviador Premium', 'precio' => 1299, 'imagen' => '../img/lentes/sol1.jpg'],
-        ['id' => hash('crc32', 'Sol2'), 'nombre' => 'Polarized Black', 'precio' => 1599, 'imagen' => '../img/lentes/sol2.jpg'],
-        ['id' => hash('crc32', 'Sol3'), 'nombre' => 'Sport Edition', 'precio' => 1799, 'imagen' => '../img/lentes/sol3.jpg'],
-        ['id' => hash('crc32', 'Sol4'), 'nombre' => 'Vintage Gold', 'precio' => 1899, 'imagen' => '../img/lentes/sol4.jpg']
-    ]
-];
+//$categorias = [
+  //  'Oftálmicos' => [
+    //    ['id' => hash('crc32', 'Oft1'), 'nombre' => 'Clásico Elegance', 'precio' => 1499, 'imagen' => '../img/lentes/oft1.jpg', 'detalles' => ['Diseño ejecutivo premium', 'Materiales ultrarresistentes', 'Garantía de 2 años', 'Incluye estuche de protección']],
+      // ['id' => hash('crc32', 'Oft2'), 'nombre' => 'Modern Vision Pro', 'precio' => 2199, 'imagen' => '../img/lentes/oft2.jpg', 'detalles' => ['Tecnología anti-reflejo HD', 'Protección UV 400 completa', 'Lentes ultra delgados', 'Filtro luz azul']],
+       // ['id' => hash('crc32', 'Oft3'), 'nombre' => 'UltraLight Comfort', 'precio' => 1899, 'imagen' => '../img/lentes/oft3.jpg', 'detalles' => ['Peso ultraligero (menos de 15g)', 'Ajuste ergonómico perfecto', 'Material flexible hipoalergénico', 'Incluye funda deportiva']],
+       // ['id' => hash('crc32', 'Oft4'), 'nombre' => 'Executive Design', 'precio' => 2499, 'imagen' => '../img/lentes/oft4.jpg', 'detalles' => ['Diseño 100% personalizable', 'Tratamiento anti-fatiga digital', 'Estuche premium de regalo', 'Servicio de ajuste profesional']]
+   // ],
+    //'Sol' => [
+      //  ['id' => hash('crc32', 'Sol1'), 'nombre' => 'Aviador Premium', 'precio' => 1299, 'imagen' => '../img/lentes/sol1.jpg'],
+      //  ['id' => hash('crc32', 'Sol2'), 'nombre' => 'Polarized Black', 'precio' => 1599, 'imagen' => '../img/lentes/sol2.jpg'],
+      //  ['id' => hash('crc32', 'Sol3'), 'nombre' => 'Sport Edition', 'precio' => 1799, 'imagen' => '../img/lentes/sol3.jpg'],
+      //  ['id' => hash('crc32', 'Sol4'), 'nombre' => 'Vintage Gold', 'precio' => 1899, 'imagen' => '../img/lentes/sol4.jpg']
+   // ]
+//];
 ?>
 
 <body>
