@@ -2,27 +2,9 @@
 <html lang="en">
 <?php
 include '../resources/head.php';
+include '../resources/sucursales-func.php';
 
-$tiendas = [
-    [
-        'nombre' => 'Las Americas Ecatepec',
-        'distancia' => '71 km',
-        'direccion' => 'Av. Central S/N., Las Américas, Ecatepec de Morelos, Méx, S/N Fraccionamiento Las Americas, CPI 55076',
-        'referencia' => 'En la nueva sección de la plaza comercial, enfrente de DAX en el pasillo del costado de Liverpool',
-        'horario' => 'Lunes a domingo - 11:00 am a 8:00 pm',
-        'imagen' => '../img/sucursales/ejemplo.jpg',
-        'mapa' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.808635306339!2d-99.11790798561684!3d19.5041865868544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f8c1a1d1f7a5%3A0x9e6d7c9b6e7e7b1a!2sOptimania!5e0!3m2!1ses!2smx!4v1622545000000!5m2!1ses!2smx'
-    ],
-    [
-        'nombre' => 'Aragon',
-        'distancia' => '10.9 km',
-        'direccion' => 'Av. Carlos Hank González 120 CPI 55140 Estado de México (MX), México',
-        'referencia' => 'A un costado de Gameplanet',
-        'horario' => 'lunes a domingo - 11:00 am a 8:00 pm',
-        'imagen' => '../img/sucursales/ejemplo2.jpg',
-        'mapa' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.2345678901234!2d-99.12345678901234!3d19.432608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f8c1a1d1f7a5%3A0x9e6d7c9b6e7e7b1a!2sOptimania!5e0!3m2!1ses!2smx!4v1622545000000!5m2!1ses!2smx'
-    ]
-];
+$tiendas = obtenerTiendas();
 ?>
 
 <body>
@@ -38,7 +20,6 @@ $tiendas = [
                             class="img-fluid rounded-lg shadow" style="width: 100%; height: 300px; object-fit: cover;">
                     </div>
 
-
                     <div class="text-center mb-5">
                         <h1 class="display-4 mb-3" style="color: #33b1e3; font-weight: 800;">Agenda tu examen de la
                             vista ¡es gratis!</h1>
@@ -46,7 +27,6 @@ $tiendas = [
                     </div>
 
                     <div class="row">
-
                         <div class="col-md-6 pr-lg-4">
                             <div class="tiendas-list" style="max-height: 70vh; overflow-y: auto; padding-right: 15px;">
                                 <h3 class="mb-4"><?= count($tiendas) ?> Tiendas disponibles</h3>
@@ -77,7 +57,6 @@ $tiendas = [
                             </div>
                         </div>
 
-
                         <div class="col-md-6 pl-lg-4">
                             <div class="sticky-top" style="top: 20px;">
                                 <div class="border rounded bg-white p-3">
@@ -92,7 +71,6 @@ $tiendas = [
                             </div>
                         </div>
                     </div>
-
 
                     <div class="recordatorios mt-5 p-4 rounded" style="background: #e3f2fd; border: 2px solid #33b1e3;">
                         <h4 class="h5 mb-3" style="color: #33b1e3;">Recuerda:</h4>
@@ -122,8 +100,5 @@ $tiendas = [
     <?php include '../resources/JS.php'; ?>
 
     <script src="../js/sub.js"> </script>
-
-
 </body>
-
 </html>
