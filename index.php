@@ -98,7 +98,7 @@
 
                         <nav class="ps-main-menu">
                             <ul class="menu">
-                                <li class="has-mega-menu"><a href="/">Inicio</a></li>
+                                <li class="has-mega-menu"><a href="Optimania/index.php">Inicio</a></li>
                                 <li class="has-mega-menu"><a href="#"> Lentes<span class="sub-toggle"><i
                                                 class="fa fa-chevron-down"></i></span></a>
                                     <div class="mega-menu">
@@ -111,7 +111,7 @@
                                                                 src="img/promotion/01.jpg" alt="alt" />
                                                             <div class="ps-promo__content">
                                                                 <h4 class="mb-20 ps-promo__name">de Sol</h4>
-                                                                <a class="ps-promo__btn" href="#">Ver</a>
+                                                                <a class="ps-promo__btn" href="/Optimania/modulos/LentesSOL.php">Ver</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -123,7 +123,7 @@
                                                                 src="img/promotion/02.jpg" alt="alt" />
                                                             <div class="ps-promo__content">
                                                                 <h4 class="mb-20 ps-promo__name">Oftalomológicos</h4>
-                                                                <a class="ps-promo__btn" href="#">Ver</a>
+                                                                <a class="ps-promo__btn" href="/Optimania/modulos/LentesOFT.php">Ver</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -134,7 +134,7 @@
                                                                 src="img/promotion/03.jpg" alt="alt" />
                                                             <div class="ps-promo__content">
                                                                 <h4 class="ps-promo__name">de Contacto</h4>
-                                                                <a class="ps-promo__btn" href="#">Ver</a>
+                                                                <a class="ps-promo__btn" href="/Optimania/modulos/LenteCONT.PHP">Ver</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -144,10 +144,10 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="has-mega-menu"><a href="modulos/sucursales.php">Sucursales</a></li>
-                                <li class="has-mega-menu"><a href="#">Promociones</a></li>
+                                <li class="has-mega-menu"><a href="/Optimania/modulos/sucursales.php">Sucursales</a></li>
+                                <li class="has-mega-menu"><a href="/Optimania/modulos/Promociones.php">Promociones</a></li>
                                 <li class="has-mega-menu"><a href="#">Centro Auditivo</a></li>
-                                <li class="has-mega-menu"><a href="#">Contacto</a></li>
+                                <li class="has-mega-menu"><a href="/Optimania/modulos/contacto.php">Contacto</a></li>
                             </ul>
                         </nav>
 
