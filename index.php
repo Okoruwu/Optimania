@@ -263,16 +263,14 @@
 
                                 <div class="ps-product__content text-center">
                                     <h4 style="line-height: 30px; font-size: 18px;"
-                                        class="mt-4 ps-section__title text-center">Optimania la Pilita Metepec</h4>
-                                    <p style="line-height: 20px;">Av. Hermenegildo Galeana No. 500 Plaza La Pilita
-                                        Metepec Colonia San Mateo Metepec Estado de México CP 52140</p>
-                                    <p><a
+                                        class="mt-4 ps-section__title text-center">Optimania </h4>
+                                    <p style="line-height: 20px;">Proximamente</p>
+                                        <!--  <p><a
                                             href="https://www.google.com/maps/place/Optiman%C3%ADa+La+Pilita/@19.2585674,-99.5964368,18z/data=!4m5!3m4!1s0x85cd895b7056a5cd:0x75cf3703f9ff0cfb!8m2!3d19.2578881!4d-99.5971279?shorturl=1"><i
                                                 class="fa fa-map-marker" aria-hidden="true"></i>
-                                            Ver mapa</a></p>
-                                    <p style="line-height: 20px;"><b>Horarios:</b><br>Lunes a domingo 11: 00 AM a 8:00
-                                        PM</p>
-                                    <a class="ps-btn ps-btn--warning w-80" href="">Agendar cita</a>
+                                            Ver mapa</a></p>-->
+                                    <p style="line-height: 20px;"><b>Horarios:</b><br>Horario en espera</p>
+                                    <a class="ps-btn ps-btn--warning w-80" href="">¡Esperanos!</a>
 
 
                                 </div>

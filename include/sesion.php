@@ -8,7 +8,7 @@ if (!($_SESSION["UserId"])) {
     header('Location: /admin/login');
     exit();
 } else { 
-    require_once($_SERVER["DOCUMENT_ROOT"]."/config.php");
+    require_once($_SERVER["DOCUMENT_ROOT"]."/Optimania/config.php");
     $UserData =	$db->getAllRecords('usuarios','*',' AND id="'.($_SESSION["UserId"]).'"LIMIT 1 ');
     $UserData = $UserData[0];
     

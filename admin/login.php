@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once($_SERVER["DOCUMENT_ROOT"] . "/config.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "/Optimania/config.php");
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -64,13 +64,13 @@ try {
   <title>Dashboard | Optimania</title>
   <meta name="robots" content="noindex">
   <!-- General CSS Files -->
-  <link rel="stylesheet" href="/admin/assets/css/app.min.css">
-  <link rel="stylesheet" href="/admin/assets/bundles/bootstrap-social/bootstrap-social.css">
+  <link rel="stylesheet" href="/Optimania/admin/assets/css/app.min.css">
+  <link rel="stylesheet" href="/Optimania/admin/assets/bundles/bootstrap-social/bootstrap-social.css">
   <!-- Template CSS -->
-  <link rel="stylesheet" href="/admin/assets/css/style.css">
-  <link rel="stylesheet" href="/admin/assets/css/components.css">
+  <link rel="stylesheet" href="/Optimania/admin/assets/css/style.css">
+  <link rel="stylesheet" href="/Optimania/admin/assets/css/components.css">
   <!-- Custom style CSS -->
-  <link rel="stylesheet" href="/admin/assets/css/custom.css">
+  <link rel="stylesheet" href="/Optimania/admin/assets/css/custom.css">
 </head>
 
 <body>
@@ -82,7 +82,7 @@ try {
 
         //MENSAJES DE ESTATUS
         if (isset($_COOKIE["msg"])) {
-          require_once($_SERVER["DOCUMENT_ROOT"] . "/include/msg.php");
+          require_once($_SERVER["DOCUMENT_ROOT"] . "/Optimania/include/msg.php");
         } ?>
       </div>
     </div>
@@ -129,13 +129,13 @@ try {
     </section>
   </div>
   <!-- General JS Scripts -->
-  <script src="/admin/assets/js/app.min.js"></script>
+  <script src="/Optimania/admin/assets/js/app.min.js"></script>
   <!-- JS Libraies -->
   <!-- Page Specific JS File -->
   <!-- Template JS File -->
-  <script src="/admin/assets/js/scripts.js"></script>
+  <script src="/Optimania/admin/assets/js/scripts.js"></script>
   <!-- Custom JS File -->
-  <script src="/admin/assets/js/custom.js"></script>
+  <script src="/Optimania/admin/assets/js/custom.js"></script>
 </body>
 
 </html>

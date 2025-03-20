@@ -7,13 +7,13 @@ $promociones = [
     'destacadas' => [
         [
             'titulo' => '2x1 en Lentes de Sol',
-            'imagen' => '../img/promos/2x1-sol.jpg',
+            'imagen' => '../img/promo/promosol.jpg',
             'vigencia' => 'Hasta el 30 de junio',
             'condiciones' => 'Aplican modelos seleccionados'
         ],
         [
             'titulo' => 'Armazón Gratis',
-            'imagen' => '../img/promos/armazon-gratis.jpg',
+            'imagen' => '../img/promo/promoarmazon.jpg',
             'vigencia' => 'Todo el mes de julio',
             'condiciones' => 'En compra de lentes oftálmicos'
         ]
@@ -24,13 +24,13 @@ $promociones = [
                 'nombre' => 'Protección Blue Light',
                 'precio' => '1,299',
                 'descuento' => '40%',
-                'imagen' => '../img/promos/blue-light.jpg'
+                'imagen' => '../img/promo/pro1.jpg'
             ],
             [
                 'nombre' => 'Multifocales Premium',
                 'precio' => '2,499',
                 'descuento' => '30%',
-                'imagen' => '../img/promos/multifocales.jpg'
+                'imagen' => '../img/promo/pro2.jpg'
             ]
         ],
         'Sol' => [
@@ -38,13 +38,13 @@ $promociones = [
                 'nombre' => 'Polarizados Elite',
                 'precio' => '1,599',
                 'descuento' => '25%',
-                'imagen' => '../img/promos/polarizados.jpg'
+                'imagen' => '../img/promo/pro3.png'
             ],
             [
                 'nombre' => 'Deportivos UltraResist',
                 'precio' => '1,899',
                 'descuento' => '35%',
-                'imagen' => '../img/promos/deportivos.jpg'
+                'imagen' => '../img/promo/pro4.jpg'
             ]
         ]
     ]
@@ -127,9 +127,9 @@ $promociones = [
                                 <div class="card-body text-center">
                                     <h5 class="card-title fw-bold"><?= $item['nombre'] ?></h5>
                                     <div class="d-flex justify-content-center align-items-center gap-2">
-                                        <span class="text-muted text-decoration-line-through">
-                                            $<?= number_format($item['precio'] * 1.3, 0) ?> MXN
-                                        </span>
+                                    <span class="text-muted text-decoration-line-through">
+                                     $<?= isset($item['precio']) && is_numeric($item['precio']) ? number_format($item['precio'] * 1.3, 0) : '0' ?> MXN
+                                    </span>
                                         <span class="h4 text-danger fw-bold">$<?= $item['precio'] ?> MXN</span>
                                     </div>
                                     <button class="btn btn-outline-warning mt-3 w-100">

@@ -1,5 +1,5 @@
 <?php session_start();
-    require_once($_SERVER["DOCUMENT_ROOT"]."/include/sesion.php");
+    require_once($_SERVER["DOCUMENT_ROOT"]."/Optimania/include/sesion.php");
 
     if (($UserData['rol'])>=2) {
         setcookie("msg","super",time() + 1, "/");

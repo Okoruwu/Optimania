@@ -4,16 +4,16 @@ include '../resources/carrito_functions.php';
 
 $categorias = [
     'Deportivos' => [
-        ['id' => hash('crc32', 'Dep1'), 'nombre' => 'Sport Extreme', 'precio' => 2499, 'imagen' => '../img/lentes/sol1.jpg', 'detalles' => ['Montura flexible', 'Lentes espejados', 'Sistema de ventilación', 'Correa ajustable']],
-        ['id' => hash('crc32', 'Dep2'), 'nombre' => 'Cycling Pro', 'precio' => 2199, 'imagen' => '../img/lentes/sol2.jpg', 'detalles' => ['Lentes fotocromáticos', 'Protección lateral', 'Material ultraligero', 'Anti-empañante']]
+        ['id' => hash('crc32', 'Dep1'), 'nombre' => 'Sport Extreme', 'precio' => 2499, 'imagen' => '../img/lentes/len1.jpg', 'detalles' => ['Montura flexible', 'Lentes espejados', 'Sistema de ventilación', 'Correa ajustable']],
+        ['id' => hash('crc32', 'Dep2'), 'nombre' => 'Cycling Pro', 'precio' => 2199, 'imagen' => '../img/lentes/len1.jpg', 'detalles' => ['Lentes fotocromáticos', 'Protección lateral', 'Material ultraligero', 'Anti-empañante']]
     ],
     'Moto' => [
-        ['id' => hash('crc32', 'Moto1'), 'nombre' => 'Rider Shield Pro', 'precio' => 2899, 'imagen' => '../img/lentes/sol3.jpg', 'detalles' => ['Protección integral', 'Visión periférica', 'Cierre hermético', 'Lentes intercambiables']],
-        ['id' => hash('crc32', 'Moto2'), 'nombre' => 'SpeedMaster X', 'precio' => 3199, 'imagen' => '../img/lentes/sol4.jpg', 'detalles' => ['Diseño aerodinámico', 'Tecnología anti-vibración', 'Material irrompible', 'Ventilación direccional']]
+        ['id' => hash('crc32', 'Moto1'), 'nombre' => 'Rider Shield Pro', 'precio' => 2899, 'imagen' => '../img/lentes/len1.jpg', 'detalles' => ['Protección integral', 'Visión periférica', 'Cierre hermético', 'Lentes intercambiables']],
+        ['id' => hash('crc32', 'Moto2'), 'nombre' => 'SpeedMaster X', 'precio' => 3199, 'imagen' => '../img/lentes/len1.jpg', 'detalles' => ['Diseño aerodinámico', 'Tecnología anti-vibración', 'Material irrompible', 'Ventilación direccional']]
     ],
     'Artísticos' => [
-        ['id' => hash('crc32', 'Art1'), 'nombre' => 'Retro Vintage', 'precio' => 1999, 'imagen' => '../img/lentes/sol5.jpg', 'detalles' => ['Diseño único', 'Montura artesanal', 'Lentes degradados', 'Edición limitada']],
-        ['id' => hash('crc32', 'Art2'), 'nombre' => 'Avant Garde', 'precio' => 2499, 'imagen' => '../img/lentes/sol6.jpg', 'detalles' => ['Formas geométricas', 'Colores personalizados', 'Materiales mixtos', 'Estuche de colección']]
+        ['id' => hash('crc32', 'Art1'), 'nombre' => 'Retro Vintage', 'precio' => 1999, 'imagen' => '../img/lentes/len1.jpg', 'detalles' => ['Diseño único', 'Montura artesanal', 'Lentes degradados', 'Edición limitada']],
+        ['id' => hash('crc32', 'Art2'), 'nombre' => 'Avant Garde', 'precio' => 2499, 'imagen' => '../img/lentes/len1.jpg', 'detalles' => ['Formas geométricas', 'Colores personalizados', 'Materiales mixtos', 'Estuche de colección']]
     ]
 ];
 ?>
@@ -25,7 +25,7 @@ $categorias = [
         <div class="container">
 
             <div class="banner-catalogo mb-5">
-                <img src="../img/banners/banner-sol.jpg" alt="Lentes de Sol" class="img-fluid rounded-lg shadow"
+                <img src="../img/banners/BANNER-PAGINA4.png" alt="Lentes de Sol" class="img-fluid rounded-lg shadow"
                     style="height: 300px; object-fit: cover; width: 100%; border: 3px solid #33b1e3;">
             </div>
 
